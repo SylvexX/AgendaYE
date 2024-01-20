@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>VOEG TOE | yannick Elstak</title>
+</head>
+<body>
+    <h2>Vul de gegevens van het agenda-item in:</h2>
+    <form class="form_container" name="agendaFormulier" method="post" action="toevoegVerwerk.php">
+        <table>
+            <tr>
+                <td>Onderwerp:</td>
+                <td><input type="text" name="onderwerpVeld" required placeholder="Onderwerp.."></td>
+            </tr>
+            <tr>
+                <td>Inhoud:</td>
+                <td><input type="text" name="inhoudVeld" required placeholder="inhoud..."></td>
+            </tr>
+            <tr>
+                <td>Begindatum:</td>
+                <td><input type="date" name="begindatumVeld" required ></td>
+            </tr>
+            <tr>
+                <td>Einddatum:</td>
+                <td><input type="date" name="einddatumVeld" required></td>
+            </tr>
+            <tr>
+                <td>Prioriteit:</td>
+                <td><input type="number" name="prioriteitVeld" min="1" max="5" value="3" required></td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>
+                    <select name="statusVeld">
+                        <option value="n" selected>Niet begonnen</option>
+                        <option value="b">Bezig</option>
+                        <option value="a">Afgerond</option>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="verzend" value="Voeg toe aan agenda"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
